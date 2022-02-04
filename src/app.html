@@ -1,0 +1,36 @@
+<template>
+  <require from="./customComponent"></require>
+
+
+  <div style="display: flex; flex-direction: row; align-items: stretch;">
+    <div style="flex: 1;">
+      <h3>Example 1:Working</h3>
+
+      address: ${data1.user.address}
+      <br>
+      email: ${data1.user.email}
+      <br>
+
+      <div class="form-group">
+        <input value.bind="data1.user.address & validate:form1">
+      </div>
+      <div class="form-group">
+        <input value.bind="data1.user.email & validate:form1">
+      </div>
+    </div>
+
+    <div style="flex: 1;">
+      <h3>Example 2:Not Working</h3>
+
+      address: ${data2.user.address}
+      <br>
+      email: ${data2.user.email}
+      <br>
+      <custom-component address.bind="data2.user.address & validate:form2"
+        email.bind="data2.user.email & validate:form2"></custom-component>
+    </div>
+
+  </div>
+
+
+</template>
