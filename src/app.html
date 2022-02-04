@@ -1,10 +1,11 @@
 <template>
   <require from="./customComponent"></require>
+  <require from="./myPage"></require>
 
 
   <div style="display: flex; flex-direction: row; align-items: stretch;">
     <div style="flex: 1;">
-      <h3>Example 1:Working</h3>
+      <h4>Example 1:Working (but I cannot use native inputs in my personal app)</h3>
 
       address: ${data1.user.address}
       <br>
@@ -20,7 +21,7 @@
     </div>
 
     <div style="flex: 1;">
-      <h3>Example 2:Not Working</h3>
+      <h4>Example 2:Not Working (need to make this work)</h3>
 
       address: ${data2.user.address}
       <br>
@@ -31,6 +32,8 @@
     </div>
 
   </div>
+
+  <my-page></my-page>
 
 
 </template>

@@ -1,0 +1,20 @@
+<template>
+  <require from="./customComponent"></require>
+
+
+  <div style="display: flex; flex-direction: row; align-items: stretch;">
+    <div style="flex: 1;">
+      <h4>Example 3: This is like "Example 2" but with the hack. It works in personal app but not in this exact app</h3>
+
+      address: ${data.user.address}
+      <br>
+      email: ${data.user.email}
+      <br>
+      <custom-component address.bind="data.user.address & validate"
+        email.bind="data.user.email & validate"></custom-component>
+    </div>
+
+  </div>
+
+
+</template>
